@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PostActivity">
+
+    <ImageButton
+        android:id="@+id/imbt_profile_photo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/profile_photo"
+        android:src="@drawable/circle_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/transparent"
+        android:gravity="top"
+        android:text="@string/profile_name"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/imbt_profile_photo"
+        app:layout_constraintTop_toTopOf="@id/imbt_profile_photo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@color/transparent"
+        android:gravity="start"
+        android:text="@string/post_time"
+        android:textAllCaps="false"
+        android:textColor="@color/gray_70"
+        app:layout_constraintBottom_toBottomOf="@id/bt_profile_name"
+        app:layout_constraintStart_toEndOf="@id/imbt_profile_photo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/transparent"
+        android:drawableRight="@drawable/menu_button"
+        app:layout_constraintBottom_toTopOf="@id/tv_post_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_post_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/post_content"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/imbt_post"
+        app:layout_constraintTop_toBottomOf="@id/imbt_profile_photo" />
+
+    <ImageButton
+        android:id="@+id/imbt_post"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/back_blue"
+        app:layout_constraintBottom_toTopOf="@id/lil_like_share_numbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_text"
+        />
+
+    <LinearLayout
+        android:id="@+id/lil_like_share_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@id/bt_comment">
+
+        <Button
+            android:id="@+id/bt_like_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/like_numbers"
+            android:gravity="start|center"
+            android:text="@string/likes_number"
+            android:textColor="@color/gray_70"
+            app:layout_constraintStart_toStartOf="@id/lil_like_share_numbers" />
+
+        <Button
+            android:id="@+id/bt_share_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="end|center"
+            android:text="@string/share_numbers"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_70"
+            app:layout_constraintEnd_toEndOf="@id/lil_like_share_numbers" />
+    </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/bt_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/like_button"
+            android:text="@string/like"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_70"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bt_comment"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/bt_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/comment_button"
+            android:text="@string/comment"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_70"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bt_share"
+            app:layout_constraintStart_toEndOf="@id/bt_like"/>
+
+        <Button
+            android:id="@+id/bt_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/share_button"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_70"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bt_comment"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

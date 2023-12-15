@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Facbook</string>
+    <string name="profile_name">Unbiast</string>
+    <string name="post_time">2 hrs</string>
+    <string name="post_content">Buckle up, because change is coming to word press</string>
+    <string name="share_numbers">1 مشاركة</string>
+    <string name="likes_number">12</string>
+    <string name="like">إعجاب</string>
+    <string name="comment">تعليق</string>
+    <string name="share">مشاركة</string>
+</resources>
